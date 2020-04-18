@@ -77,23 +77,69 @@ end
 # once the above tests pass,
 # write tests and code for the following:
 
-describe "#multiply" do
+describe "#multiply" do #*
 
-  it "multiplies two numbers"
+  it "multiplies two numbers" do 
+    expect(multiplies([2,2])).to eq(4)
+  end
 
-  it "multiplies several numbers"
+  it "multiplies several numbers" do 
+    expect(multiplies([2,3,4,5,6,7,8])).to eq(40320)
+  end
   
 end
 
-describe "#power" do
-  it "raises one number to the power of another number"
+describe "#power" do #^ = ** 
+  it "raises one number to the power of another number" do 
+    expect(power(2, 8)).to eq(256)
+  end
 end
 
 # http://en.wikipedia.org/wiki/Factorial
 describe "#factorial" do
-  it "computes the factorial of 0"
-  it "computes the factorial of 1"
-  it "computes the factorial of 2"
-  it "computes the factorial of 5"
-  it "computes the factorial of 10"
+  it "computes the factorial of 0" do
+    expect(factorial(0)).to eq(1)
+  end
+
+  it "computes the factorial of 1" do
+    expect(factorial(1)).to eq(1)
+  end
+
+  it "computes the factorial of 2" do
+    expect(factorial(2)).to eq(2)
+  end
+
+  it "computes the factorial of 5" do
+    expect(factorial(5)).to eq(120)
+  end
+
+  it "computes the factorial of 10" do
+    expect(factorial(10)).to eq(3628800)
+  end 
 end
+
+ describe "#fibonacci" do
+  it "computes the fibonacci 0th" do
+    expect(fibonacci(0)).to eq(0)
+  end
+  
+  it "computes the fibonacci 1st" do
+    expect(fibonacci(1)).to eq(1)
+  end
+  
+  it "computes the fibonacci 2nd" do
+    expect(fibonacci(2)).to eq(1)
+  end
+  
+  it "computes the fibonacci 3rd" do
+    expect(fibonacci(3)).to eq(2)
+  end
+  
+  it "computes the fibonacci 4th" do
+    expect(fibonacci(4)).to eq(3)
+  end
+   
+  it "computes the fibonacci 10th" do
+    expect(fibonacci(10)).to eq(55)
+  end
+end 
